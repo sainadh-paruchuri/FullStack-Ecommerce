@@ -1,0 +1,121 @@
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+.navigation {
+    background-color: rebeccapurple;
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    overflow: hidden;
+}
+nav ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+nav ul li {
+    font-size: 1.5rem;
+    list-style-type: none;
+    cursor: pointer;
+    padding: 20px 30px;
+}
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+nav #cart {
+    background-color: rebeccapurple;
+    font-size: 20px;
+    color: white;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 50px;
+    border-width: initial;
+    border-style: none;
+    border-color: initial;
+    border-image: initial;
+}
+.header {
+    background-color: rgb(108, 70, 117);
+    margin-top: 60px;
+    padding-top: 20px;
+    padding-bottom: 60px;
+    font-size: 30px;
+    text-align: center;
+    color: white;
+}
+#shirts {
+    text-align: center;
+    margin: 30px 0px;
+    padding: 10px;
+}
+.list-group {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 50px;
+}
+.item h3 {
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 25px;
+}
+img {
+    height: 300px;
+    width: 250px;
+}
+.carts {
+    display: flex;
+    margin-top: 10px;
+    align-items: center;
+}
+#button {
+    margin-left: 100px;
+    height: 30px;
+    background-color: rebeccapurple;
+    color: white;
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 5px;
+    border-width: initial;
+    border-style: none;
+    border-color: initial;
+    border-image: initial;
+}
+#cartButton {
+    text-align: center;
+    margin: 30px;
+}
+#btn {
+    height: 40px;
+    width: 170px;
+    font-size: 20px;
+    background-color: rgb(108, 70, 117);
+    color: white;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 5px;
+    border-width: initial;
+    border-style: none;
+    border-color: initial;
+    border-image: initial;
+}
+.footer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rebeccapurple;
+}
+.footer h1 {
+    color: white;
+    font-size: 30px;
+}
+.footer ul {
+    display: flex;
+    list-style-type: none;
+}
+.footer ul li {
+    padding: 20px;
+}
