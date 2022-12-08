@@ -14,11 +14,11 @@
     <div class="navigation">
         <nav id="nav">
             <ul>
-                <li><a href="#">Home</a></li>
+                <li><a href="home.html">Home</a></li>
                 <li><a href="#">Store</a></li>
-                <li><a href="#">About</a> </li>
+                <li><a href="about.html">About</a> </li>
             </ul>
-            <button id="cart">cart</button>
+            <a id="cart">cart<span id="number">0</span></a>
         </nav>
     </div>
     <div class="header">
@@ -28,66 +28,89 @@
     <div class="section1">
         <h1 id="shirts">Shirts</h1>
         <div class="list-group">
-            <div class="item">
-                <h3>Mens T-shirt</h3>
+            <div class="item" id="item1">
+                <h3>Mens Shirt</h3>
                 <img src="./images/shirt1.jpg" alt="shirt1">
                 <div class="carts">
-                    <h4 id="amount">$12.99</h4>
+                    $<h4 id="amount">12.99</h4>
                     <button id="button">ADD TO CART</button>
                 </div>
             </div>
-            <div class="item">
-                <h3>Mens T-shirt</h3>
+            <div class="item" id="item2">
+                <h3>Mens Shirt</h3>
                 <img src="./images/shirt2.jpg" alt="shirt1">
                 <div class="carts">
-                    <h4 id="amount">$13.99</h4>
+                   $<h4 id="amount">13.99</h4>
                     <button id="button">ADD TO CART</button>
                 </div>
             </div>
         </div>
         <div class="list-group">
-            <div class="item">
+            <div class="item" id="item3">
                 <h3>Mens T-shirt</h3>
                 <img src="./images/shirt3.jpg" alt="shirt1">
                 <div class="carts">
-                    <h4 id="amount">$12.99</h4>
+                    $<h4 id="amount">12.99</h4>
                     <button id="button">ADD TO CART</button>
                 </div>
             </div>
-            <div class="item">
+            <div class="item" id="item4">
                 <h3>Mens T-shirt</h3>
                 <img src="./images/shirt4.jpg" alt="shirt1">
                 <div class="carts">
-                    <h4 id="amount">$13.99</h4>
+                    $<h4 id="amount">13.99</h4>
                     <button id="button">ADD TO CART</button>
                 </div>
             </div>
         </div>
-    </div>
-    <div class="section1">
+    
         <h1 id="shirts">Mobiles</h1>
         <div class="list-group">
-            <div class="item">
+            <div class="item" id="item5">
                 <h3>Real Me</h3>
                 <img src="./images/mobile1.jpg" alt="shirt1">
                 <div class="carts">
-                    <h4 id="amount">$15.99</h4>
+                    $<h4 id="amount">15.99</h4>
                     <button id="button">ADD TO CART</button>
                 </div>
             </div>
-            <div class="item">
+            <div class="item" id="item6">
                 <h3>One Plus</h3>
                 <img src="./images/mobile2.jpg" alt="shirt1">
                 <div class="carts">
-                    <h4 id="amount">$14.99</h4>
+                    $<h4 id="amount">14.99</h4>
                     <button id="button">ADD TO CART</button>
                 </div>
             </div>
         </div>
-    </div>
+    
     <div id="cartButton">
         <button id="btn">See the cart</button>
     </div>
+    <div class="cart-section">
+        <h3>Cart</h3>
+        <div class="cart-header">
+            <div class="cart-item"><strong>Items</strong></div>
+            <div class="cart-quantity"><strong>Quantity</strong></div>
+            <div class="cart-price"><strong>Price</strong></div>
+        </div>
+        <hr>
+        <div class="cart-items"></div>
+        <hr>
+        <div class="cart-total">
+            
+            <span>
+                <span class='total-title'> <strong>Total</strong>
+                </span>
+                $<span id='total-value'>0</span>
+            </span>
+        </div>
+        <div id="purchase">
+        <button class='purchase-btn' type='button'>PURCHASE</button>
+        </div>
+    </div>
+    <div id="container"></div>
+</div>
     <div class="footer">
         <h1>The Generics</h1>
         <ul>
@@ -99,44 +122,7 @@
                         style="font-size:48px;color:#00acee"></i></a></li>
         </ul>
     </div>
-    <!-- Code injected by live-server -->
-    <script>
-	// <![CDATA[  <-- For SVG support
-	if ('WebSocket' in window) {
-		(function () {
-			function refreshCSS() {
-				var sheets = [].slice.call(document.getElementsByTagName("link"));
-				var head = document.getElementsByTagName("head")[0];
-				for (var i = 0; i < sheets.length; ++i) {
-					var elem = sheets[i];
-					var parent = elem.parentElement || head;
-					parent.removeChild(elem);
-					var rel = elem.rel;
-					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
-						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
-						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
-					}
-					parent.appendChild(elem);
-				}
-			}
-			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
-			var address = protocol + window.location.host + window.location.pathname + '/ws';
-			var socket = new WebSocket(address);
-			socket.onmessage = function (msg) {
-				if (msg.data == 'reload') window.location.reload();
-				else if (msg.data == 'refreshcss') refreshCSS();
-			};
-			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
-				console.log('Live reload enabled.');
-				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
-			}
-		})();
-	}
-	else {
-		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
-	}
-	// ]]>
-    </script>
+    <script src="script.js"></script>
 </body>
 
 </html>

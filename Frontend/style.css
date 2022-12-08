@@ -33,10 +33,7 @@ nav #cart {
     top: 20px;
     right: 20px;
     width: 50px;
-    border-width: initial;
-    border-style: none;
-    border-color: initial;
-    border-image: initial;
+    cursor: pointer;
 }
 .header {
     background-color: rgb(108, 70, 117);
@@ -118,4 +115,134 @@ img {
 }
 .footer ul li {
     padding: 20px;
+}
+
+.cart-section h3{
+    text-align: center;
+    font-size: 30px;
+}
+.cart-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 30px;
+}
+.cart-total{
+    display: flex;
+    justify-content: end;
+    margin-top: 20px;
+    margin-right: 100px;
+    font-size: 30px;
+}
+.cart-items{
+    margin: 30px;
+}
+#purchase{
+    text-align: center;
+    margin: 20px;
+}
+.purchase-btn{
+    background-color: rebeccapurple;
+    padding: 10px;
+    color: white;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+.cart-row{
+    display: flex;
+    align-items: center;
+}
+.cart-row .cart-item{
+    margin: 400px;
+    padding: 400px;
+}
+.cart-section {
+    background-color: rgb(108, 70, 117);
+    color: white;
+    position: fixed;
+    top:67px;
+    right: 0;
+    height: 100vh;
+    /* padding: 5rem; */
+    padding-right: 2rem;
+    transform: translateX(100%);
+}
+
+.cart-section.active {
+    transform: translateX(0);
+}
+.cart-section img{
+    height: 100px;
+    width: 100px;
+}
+.cart-items .cart-item{
+    display: inline;
+    text-align: center;
+}
+
+#container {
+    position: fixed;
+    bottom: 1px;
+    right: 10px;
+
+}
+
+.toast {
+    background-color: rebeccapurple;
+    border-radius: 5px;
+    color: white;
+    padding: 1rem;
+    margin: 1rem;
+}
+.cart-row .cart-item{
+    display: block;
+}
+
+/* about */
+.about h1{
+    text-align: center;
+    margin: 30px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+.descripyion{
+    display: flex;
+}
+.descripyion img{
+    width: 50%;
+    height: 250px;
+}
+
+/* Home */
+#tours h2{
+    text-align: center;
+    margin: 30px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.tour-item{
+    width: 70%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+hr{
+    width: 70%;
+    margin: 0 auto;
+}
+.tour-item span{
+    font-size: 20px;
+    padding: 30px;
+
+
+}
+.tour-item button{
+   background-color: rebeccapurple;
+   color: white;
+   padding: 10px;
+   border: none;
+   border-radius: 5px;
+   cursor: pointer;
 }
