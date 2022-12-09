@@ -33,11 +33,9 @@ main.addEventListener('click',(e)=>{
         <span class=cart-quantity>
         <input type="text" value="1">
         </span>
-    <span class='cart-price'>
         
         <span class='cart-price'>${price}</span>
-        <button>REMOVE</button>
-    </span>
+        <button id="remove">REMOVE</button>
     `
     cart_items.appendChild(cart_item)
     
@@ -68,11 +66,29 @@ document.querySelector('.purchase-btn').addEventListener('click',()=> {
         document.querySelector('#number').innerText = 0
         document.querySelector('#total-value').innerText = `0`;
     })
+   
+    
 
     }
 
 
+ document.querySelector('#remove').addEventListener('click',(event)=>{
+    console.log("hello")
+    console.log(event.target.id=='remove')
+    if(event.target.id=='remove') {
+        let totalPrice=document.querySelector('#total-value').innerText;
+        console.log(totalPrice)
+        // console.log(document.querySelector(e.target.parentNode.parentNode .childNodes[2]))
+        console.log(event.target.previousElementSibling.innerText);
+        
+         totalPrice=parseFloat(totalPrice).toFixed(2)-parseFloat(event.target.previousElementSibling.innerText).toFixed(2)
+         console.log(totalPrice)
+         document.querySelector('#number').innerText=parseInt(document.querySelector('#number').innerText)-1;
+        document.querySelector('#total-value').innerText=totalPrice;
+        event.target.parentNode.parentNode.remove();
 
+    }
+    })
 
 
 
